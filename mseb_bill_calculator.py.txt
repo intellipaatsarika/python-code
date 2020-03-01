@@ -1,0 +1,69 @@
+#MSEB electricity bill calculator
+fixed_Charges=90
+def calcElectricityBill(units):
+    units_range_1=100
+    units_range_2=300
+    units_range_3=500
+    units_range_4=1000
+    energy_charge_a=3.05
+    energy_charge_b=6.95
+    energy_charge_c=9.90
+    energy_charge_d=11.50
+    energy_charge_e=12.50
+    energy_charge_a_100=3.05*100
+    energy_charge_b_200=6.95*200
+    energy_charge_c_200=9.90*200
+    energy_charge_d_500=11.50*500
+    FAC_a=0.160
+    FAC_b=0.270
+    FAC_c=0.340
+    FAC_d=0.380
+    FAC_e=0.400
+    FAC_a_100=0.160*100
+    FAC_b_200=0.270*200
+    FAC_c_200=0.340*200
+    FAC_d_500=0.400*500
+    electricity_duty_Percentage=16
+    print("No. of units:",units)
+    print("Fixed charges:",fixed_Charges)
+    #Calculate energy_charge
+    if (units<=units_range_1):
+        energy_charge=energy_charge_a*units
+        print("Energy charges:",energy_charge)
+    elif (units>units_range_1 and units<=units_range_2):
+        energy_charge=energy_charge_a_100+(energy_charge_b*(units-units_range_1))
+        print("Energy charges:",energy_charge)
+    elif (units>units_range_2 and units<=units_range_3):
+        energy_charge=energy_charge_a_100+(energy_charge_b_200)+(energy_charge_c*(units-units_range_2))
+        print("Energy charges:",energy_charge)
+    elif (units>units_range_3 and units<=units_range_4):
+        energy_charge=energy_charge_a_100+(energy_charge_b_200)+(energy_charge_c_200)+(energy_charge_d*(units-units_range_3))
+        print("Energy charges:",energy_charge)
+    elif (units>units_range_4):
+        energy_charge=energy_charge_a_100+energy_charge_b_200+energy_charge_c_200+energy_charge_d_500+(energy_charge_e*(units-units_range_4))
+        print("Energy charges:",energy_charge)
+    Wheeling_charges=1.28*units
+    print("Wheeling charges:",Wheeling_charges)
+   # calulate fuel_adj_charge
+    if (units<=units_range_1):
+        fuel_adj_charge=FAC_a*units
+        print("FAC:",fuel_adj_charge)
+    elif (units>units_range_1 and units<=units_range_2):
+        fuel_adj_charge=FAC_a_100+(FAC_b*(units-units_range_1))
+        print("FAC:",fuel_adj_charge)
+    elif (units>units_range_2 and units<=units_range_3):
+        fuel_adj_charge=FAC_a_100+FAC_b_200+(FAC_c*(units-units_range_2))
+        print("FAC:",fuel_adj_charge)
+    elif (units>units_range_3 and units<=units_range_4):
+        fuel_adj_charge=FAC_a_100+FAC_b_200+FAC_c_200+(FAC_d*(units-units_range_3))
+        print("FAC:",fuel_adj_charge)
+    elif (units>units_range_4):
+        fuel_adj_charge=FAC_a_100+FAC_b_200+FAC_c_200+FAC_d_500+FAC_e*(units-units_range_4)
+        print("FAC:",fuel_adj_charge)
+    electricity_duty=electricity_duty_Percentage*(fixed_Charges+energy_charge+Wheeling_charges+fuel_adj_charge)/100
+    print("Electricity duty:",electricity_duty)
+    total_bill=fixed_Charges+energy_charge+Wheeling_charges+fuel_adj_charge+electricity_duty
+    print("Total current bill:"+str(total_bill))
+
+units=135
+calcElectricityBill(units)
