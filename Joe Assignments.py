@@ -116,3 +116,24 @@ dict_Months={1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'Ju
 for x in dict_Months:
     print(dict_Months[x],end=",")
 print()
+
+#A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
+#RegEx can be used to check if a string contains the specified search pattern.
+
+import re
+txt="My Name is Sarika"
+x=re.search("ka$",txt)
+print(x)
+print(x.span())               #span=
+print(x.string)             #whole string
+print(x.group())            #match= means mathing string
+if(x):
+    print("String matched")
+else:
+    print("No match")
+
+print(re.findall("a",txt))
+print(re.sub("\s","-",txt))          #replaces the matches with the text of your choice
+print(re.sub("\s","-",txt,2))        #control the number of replacements by specifying the count
+print(re.split("\s",txt))
+print(re.split("\s",txt,1))
