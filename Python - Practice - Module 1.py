@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 #variables
 x=1000              
 name='sarika'       #variable name with string literal in single quote
@@ -18,10 +15,7 @@ print (type(x))          #Data types int, float, string
 print (type(name))
 print (type(salary))
 
-
-# In[ ]:
-
-
+#Operators
 a=100              #assignment operators
 b=a*5             #arithmetic operators
 c=a+b
@@ -34,10 +28,6 @@ print (a>b and c>b)   # comparision with logical operators
 print (a>b or c>b)
 print (b>a and c>b)
 
-
-# In[ ]:
-
-
 x=y=z=50
 a,b,c = 10, 20 , 30 #mutli value assignment
 print (x)
@@ -49,10 +39,6 @@ print (c)
 print (x>a)        # Comparision operator
 print (x is 50)   #identity operator
 print (a is not 10)
-
-
-# In[ ]:
-
 
 multiline = '''line 1
 line 2
@@ -67,17 +53,9 @@ fsdf
 dsfsd"""
 print(a)
 
-
-# In[ ]:
-
-
 a = 1111111111111111111111111111111111111111111111.00000111111111
 # value of integer is not restricted in bits it depends on memory
 print (a)
-
-
-# In[ ]:
-
 
 print (7|5)  #bitwise operators
 print (7&5)
@@ -85,10 +63,6 @@ print (~7)
 print (~5)
 print (10 >>1)  # 1010 >> 01010 >> 0101
 print (10<<2)   # 101000
-
-
-# In[ ]:
-
 
 pets=['dog','cat','wolf']   # membership operator in, not in. these are used to find values from tuples, list etc.
 print ('lion' in pets)
@@ -98,10 +72,6 @@ if "tiger" in pets:
     print("tiger is not in pets")
 elif "cat" in pets:
     print("cat in pets")
-
-
-# In[ ]:
-
 
 #Data structure types - Immutable ->>> Numbers, string and Tuples
 #Mutable --> Lists, Dictionaries and Sets
@@ -130,10 +100,6 @@ print ("x is",x)
 print("Name is",name)
 print("my salary is",salary ,"my age",x)
 
-
-# In[ ]:
-
-
 #concatenate string and string variables with +
 name='Saransh'
 Name='Adhav'
@@ -152,9 +118,6 @@ print ("My name is \"Sarika Pawar\"")  #The escape character \ allows you to use
 print('My son name is \'Saransh\'')
 
 
-# In[67]:
-
-
 #Python collection (arrays) - Tuple, lists, dictionaries, sets
 # Tuples ---immutable - is a collection which is ordered and unchangeable. Allows duplicate members.
 mytuple = ('ab','cd', 50, 100, 20)
@@ -167,10 +130,6 @@ print (mytuple)
 #mytuple[2]=99       #tuple items are unchangeable
 joecar=tuple('BMW')
 print(joecar)
-
-
-# In[ ]:
-
 
 #List   --mutable --is a collection which is ordered and changeable. Allows duplicate members.
 myList = ['abc','xyz', 100, 500, 666,'sarika',999]
@@ -205,9 +164,6 @@ print(myList)       #empties the lists
 del myList                #delete the list completely
 
 
-# In[62]:
-
-
 #Dictionaries--- key value pair -- Mutable - is a collection which is unordered, changeable and indexed. No duplicate members.
 myDict = {}     # empty dictionary
 myDict1 ={1:'a',2:'b',3:'c',4:'d'}     # integer keys
@@ -219,10 +175,6 @@ print (myDict2['name'])       # access values by proving keys
 for d in myDict1:
     print(d,end=":")
     print(myDict1[d])
-
-
-# In[ ]:
-
 
 #Sets  --  is a collection which is unordered and unindexed. No duplicate members.
 #indexing not possible
@@ -241,10 +193,6 @@ print(len(mySet1))
 mySet1.remove(12.5)
 print(mySet1)
 
-
-# In[ ]:
-
-
 #Flow control in python
 # If-else, Nested if-else, for, while, break, continue
 a=10
@@ -255,10 +203,6 @@ elif a==b:
     print('a equal to b')
 else:
     print ('a is less than b')
-
-
-# In[ ]:
-
 
 #for loop - iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
 for x in "banana":
@@ -293,9 +237,6 @@ for x in fruits:
         print (x,y)
 
 
-# In[ ]:
-
-
 """for loop with range() function
 The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default),
 and ends at a specified number
@@ -315,10 +256,6 @@ for x in range (18,6,-4): # starting value(default is 1), range, decrease by (de
 else:
     print ('\nfor loop finished')
 
-
-# In[ ]:
-
-
 #if else, for loop can not be empty means it shold have some statements. for empty loop use 'pass' to avoid errors
 a=5
 b=5
@@ -330,9 +267,6 @@ def myfunction():
     pass        #no statement to execute
 
 
-# In[ ]:
-
-
 #while loop
 i=0
 while(i<=5):
@@ -342,10 +276,6 @@ else:
     print("i no longer matching condtion")
 
 #else statement we can run a block of code once when the condition no longer is true
-
-
-# In[ ]:
-
 
 #A function is a block of code which only runs when it is called. You can pass data, known as parameters/arguments,
 #into a function.A function can return data as a result.
@@ -393,10 +323,6 @@ def listFunction(food):
 fruits =["orange","apple","banana"]
 listFunction(fruits)
 
-
-# In[ ]:
-
-
 #try global and local variable with functions
 i=10                #global variables that are created outside of a function which we can use inside and outside function
 j=16
@@ -425,10 +351,7 @@ print("\n\nRecursion Example Results")
 n=tri_recursion(6)
 print("returned:",n)
 
-
-# In[ ]:
-
-
+#for loop
 def computeAffected(n):
     newly_affected=1
     total_affected=1
@@ -442,16 +365,9 @@ def computeAffected(n):
 
 computeAffected(3)
 
-
-# In[ ]:
-
-
+#input functiON
 Name=input("Enter Name: ")  #it provide text box to give input
 print(Name)
-
-
-# In[ ]:
-
 
 #pass by val and pass by ref..pending with Joe
 def fun(b):
@@ -503,12 +419,6 @@ def myFun(a,b):
 lists=myFun(2,3)
 print(lists)
 
-#use objects to 
-
-
-# In[48]:
-
-
 #file handling
 #"x" - Create - will create a file, returns an error if the file exist
 #"a" - Append - will create a file if the specified file does not exist- will append to the end of the file
@@ -545,37 +455,7 @@ else:
     
 #os.rmdir("myfolder")         #can only remove empty folders.
 
-
-# In[65]:
-
-
 import os
 print(os.getcwd())
 print(os.getlogin())
 print(os.listdir())
-
-
-# In[113]:
-
-
-#A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
-#RegEx can be used to check if a string contains the specified search pattern.
-
-import re
-txt="My Name is Sarika"
-x=re.search("ka$",txt)
-print(x)
-print(x.span())               #span=
-print(x.string)             #whole string
-print(x.group())            #match= means mathing string
-if(x):
-    print("String matched")
-else:
-    print("No match")
-
-print(re.findall("a",txt))
-print(re.sub("\s","-",txt))          #replaces the matches with the text of your choice
-print(re.sub("\s","-",txt,2))        #control the number of replacements by specifying the count
-print(re.split("\s",txt))
-print(re.split("\s",txt,1))
-
