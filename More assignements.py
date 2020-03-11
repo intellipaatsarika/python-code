@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[12]:
-
-
 #Compare two list's elements
 #lists, for and if else
 L1=[1,2,3,8,5,6,1]
@@ -16,26 +13,16 @@ for x in range(len(L1)):
     else:
         print("L1 list's element "+str(x)+" is equal to L2 element")
 
-
-# In[14]:
-
-
+#tuple
 T1=(10,20,30,40,50)
 for x in T1:
     print(x+5)
 
-
-# In[16]:
-
-
+#function
 def add_10(n):
     return n+10
 
 print(add_10(6))
-
-
-# In[22]:
-
 
 #odd even numbers
 def check_odd_even(n):
@@ -49,10 +36,6 @@ def check_odd_even(n):
 for x in range(10):
     check_odd_even(x)
 
-
-# In[44]:
-
-
 #leap year
 def is_leapYear(Y):
     if(Y%400==0 or Y%100!=0 and Y%4==0):
@@ -62,9 +45,6 @@ def is_leapYear(Y):
     
 for y in range(1990,1998):
     is_leapYear(y)
-
-
-# In[50]:
 
 
 #take list and return even number of list
@@ -77,14 +57,9 @@ def even_list(L):
         else:
             print(x,"odd number")
     return list   
-
-            
+  
 l=[1,2,3,4,5,6,8,10,91]            
 print(even_list(l))
-
-
-# In[61]:
-
 
 #List with square of numbers from 1 to 10
 def squares(n):
@@ -100,15 +75,11 @@ print(squares(10))
 squares=[i*i for i in range(10)]
 print(squares)
 
-'''
+'''multiple comments ex
 List Comprehensions
 Dictionary Comprehensions
 Set Comprehensions
 Generator Comprehensions'''
-
-
-# In[65]:
-
 
 list=[5,6,7,8,9]
 sum=0
@@ -116,12 +87,8 @@ for x in list:
     print(x)
     sum=sum+x
 print(sum)
-    
 
-
-# In[80]:
-
-
+#Tuple functions 
 t1=(10,20,30)
 t2=(40,50,60)
 t_combine=t1+t2
@@ -132,18 +99,12 @@ print(t_combine[0:3])
 print(t_combine[-3:])
 
 
-# In[85]:
-
-
+#List operations
 my_list=[(1,2,3),("a","b","c"),(True,False)]
 my_list.append((1,"a",True))
 print(my_list)
 new_list=["sparta",123]
 print(my_list+new_list)
-
-
-# In[91]:
-
 
 #to assign multiple values to one key. can use tuple, list or dictionary
 my_dict={"fruits":["apple","banana","mango","guava"],
@@ -152,17 +113,10 @@ print(my_dict.keys())
 print(my_dict.values())
 
 
-# In[95]:
-
-
 mySet={6,2,"a","sarika",True,False,"a"}
 print(mySet)
 for x in mySet:
     print(x)
-
-
-# In[132]:
-
 
 L1=[1,5,8,9,6]
 L2=[6,7,3,1,9]
@@ -187,10 +141,6 @@ L2=[6,7,3,1,9]
 matchElement(L1,L2)
         
 
-
-# In[127]:
-
-
 L1=[1,5,8,9,6]
 L2=[6,7,3,1,9]
 for i in range (len(L1)):
@@ -198,4 +148,3 @@ for i in range (len(L1)):
         if(L1[i]==L2[j]):
             print(L1[i])
             break
-
