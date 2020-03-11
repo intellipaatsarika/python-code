@@ -1,23 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 #tip calcualtion
 def tipCalc(tBill):
     tip=tBill*10/100
     print("Tip for total bill of Rs."+str(tBill)+ " is " +str(tip))
     return tip
 
-
 tipCalc(100)
 tipCalc(200)
 tipCalc(300) 
-
-
-# In[ ]:
-
 
 #MSEB electricity bill calculator
 fixed_Charges=90
@@ -72,10 +64,6 @@ def calcElectricityBill(units):
 units=135
 calcElectricityBill(units)
 
-
-# In[ ]:
-
-
 #Cumulative sum
 def cumSumList(l):
     csumList=[]
@@ -94,9 +82,7 @@ cumSumList(L)
 cumSumComp(L)
 
 
-# In[16]:
-
-
+#Os module
 import os
 os.chdir('E:\Dir Assignement')
 print(os.getcwd())
@@ -110,10 +96,7 @@ for d in os.listdir():
 print(os.listdir('E:\Dir Assignement\Sub folder 1'))   #it will list dir for given folder path
 print(os.listdir('.'))
 
-
-# In[3]:
-
-
+#os.walk
 import os
 os.chdir('E:\Dir Assignement')
 print(os.getcwd())
@@ -121,35 +104,15 @@ for d in os.walk('.'):
     print(d)
 
 
-# In[14]:
-
-
+#Map number to month name
+#tuple
 tuple_months=('January','February','March','April','May','June','July','August','September','October','November','December')
 for m in tuple_months:
     print(m,end=",")
 print()
     
-
+#Dictionaries
 dict_Months={1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
 for x in dict_Months:
     print(dict_Months[x],end=",")
 print()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
