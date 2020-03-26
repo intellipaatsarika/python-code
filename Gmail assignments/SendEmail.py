@@ -7,8 +7,8 @@
 import smtplib
 from email.message import EmailMessage
 
-user='sarikaspawar'
-pwd='Saransh2017'
+user='userid'
+pwd='pwd'
 smtp_url='smtp.gmail.com'
 from_address=user
 to_address= ["intellipaat.sarika@gmail.com","sarikaspawar@gmail.com","sarikaspawar09@gmail.com","joemtech75@gmail.com"]
