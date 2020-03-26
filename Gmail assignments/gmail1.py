@@ -10,8 +10,8 @@
 
 import imaplib
 
-user = 'sarikaspawar'
-password = 'Saransh2017'
+user='userid'
+pwd='pwd'
 imap_url = 'imap.gmail.com'
 mail = imaplib.IMAP4_SSL(imap_url)
 #make sure gmail setting allow you to log in using IMAP
