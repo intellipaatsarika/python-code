@@ -18,9 +18,8 @@ def get_body(msg):
     else:
         return msg.get_payload().rsplit('\r\n', 2)[0]
     
-
-user='sarikaspawar'
-pwd='Saransh2017'
+user='userid'
+pwd='pwd'
 imap_url='imap.gmail.com'
 mail=imaplib.IMAP4_SSL(imap_url)
 mail.login(user,pwd)
