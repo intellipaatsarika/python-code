@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 #Python's client side library called imaplib is used for accessing emails over imap protocol.IMAP-Internet Mail Access Protocol.
 #program to display all mailboxes of gmail, create new mailbox, delete existing mailbox.
 #deleting all messages from spam folder
@@ -39,10 +33,3 @@ else:
 #mail.delete('Practice')     #deleting old mailbox
 mail.close()
 mail.logout()
-
-
-# In[ ]:
-
-
-
-
