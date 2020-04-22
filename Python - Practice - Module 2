@@ -1,0 +1,213 @@
+#class variables and methods.
+class myClass:
+    var="this is class variable"
+    def func(self):
+        print(self.var+", this is method in class")
+        
+obj1=myClass()
+print(obj1.var)
+obj1.func()
+obj2=myClass()
+obj2.var="new class variable"
+print(obj1.var+", "+obj2.var)
+obj2.func()
+
+#__init__ constructor
+class initDemo:
+    def __init__(self,Name,branch,year):
+        self.n=Name
+        self.b=branch
+        self.y=year      
+    def print_method(self):
+        print("Name:",self.n)
+        print("Branch:",self.b)
+        print("Year:", self.y)
+        
+obj1=initDemo("Sarika","Elex","2020")
+obj1.print_method()
+
+#Class example
+class Vehicle:
+    name=""
+    kind="car"
+    color=""
+    value=100.00
+    def description(self):
+        desc_str="%s is %s %s with cost of $%.2f"%(self.name, self.color,self.kind,self.value)
+        return desc_str
+        
+
+car1=Vehicle()
+car1.name="Ferrari"
+car1.kind="Convertible"
+car1.color="Blue"
+car1.value=70000.00
+print(car1.description())
+
+
+#inheritance
+#Single inheritance # one child and one parent class
+class parentClass:
+    def __init__(self):
+        print("parent class")
+
+class childClass(parentClass):
+    def __init__(self):
+        super().__init__()       
+        print("Child class")
+
+obj1=parentClass()
+obj2=childClass()   
+
+#multiple inheritance # one child and multiple parent class
+class parentClass1:
+    print("parent Class1")
+class parentClass2:
+    print("parent Class2")
+class parentClass3:
+    print("parent Class3")
+class childClass(parentClass1,parentClass2,parentClass3):
+    print("child class")
+obj1=childClass()
+issubclass(childClass,parentClass1) and issubclass(childClass,parentClass2) and issubclass(childClass,parentClass3)
+
+#multilevel inheritance # one parent has its parent and also its child class.
+class grandParent:
+    print("grandparent")
+    x=1
+class parent(grandParent):
+    print("parent")
+class child(parent):
+    print("child")
+obj1=child()
+print(obj1.x)
+issubclass(child,parent) and issubclass(parent,grandParent) and issubclass(child,grandParent)
+
+#hierarichal inheritance # one parent and multiple child
+class parent:
+    print("parent")
+class child1(parent):
+    print("child1")
+class child2(parent):
+    print("child2")
+    
+issubclass(child1,parent) and issubclass(child2,parent)
+
+
+#hybrid inheritance
+class parent1:
+    x=1
+    print("parent1")
+#hierarichal inheritance
+class child1(parent1):
+    print(child1)
+class child2(parent1):
+    print(child2)
+#multiple inheritance
+class parent2:
+    print("parent2")
+class parent3:
+    print("parent3")
+class child3(parent2, parent3):
+    print("child3")
+    
+    
+    #method overriding #sub class has same method name and same parameter type,sequence etc. 
+#as of parent class with this subclass can change behaviour of parent class
+class parentClass:
+    def checkit(self):
+        print("parent class check it method")
+class childClass:
+    def checkit(self):
+        print("child class check it method")
+
+pObj=parentClass()
+cObj=childClass()
+pObj.checkit()
+cObj.checkit()
+
+#method overloading is not applicable in python
+#there are different ways to implement it.
+def add(instanceOf,*args):
+    if(instanceOf=='int'):
+        result=0
+    if(instanceOf=='str'):
+        result=''
+    if(instanceOf=='float'):
+        result=0.0
+    for i in args:
+        result+=i
+    return result
+
+print(add('int',1,2,3,4,5))
+print(add('float',1.0,5.6,7.9))
+print(add('str',"Python","_Tutorial"))
+
+
+#Encapsulation - abstraction and data hiding
+#use __ to declare private variable.
+class Encap:
+    def __init__(self):
+        self.a=20
+        self._b=30
+        self.__c=50
+    def printPrivate(self):
+        print(self.__c)
+    def setPrivate(self,maxC):
+        self.__c=maxC
+        print(self.__c)
+obj1=Encap()
+#to use private variable, use objName._classnamePrivatevariableorMethodName
+print(obj1.a,obj1._b,obj1._Encap__c)
+#call other public method to use private variable
+obj1.printPrivate()
+obj1.setPrivate(80)#method overriding #sub class has same method name and same parameter type,sequence etc. 
+#as of parent class with this subclass can change behaviour of parent class
+class parentClass:
+    def checkit(self):
+        print("parent class check it method")
+class childClass:
+    def checkit(self):
+        print("child class check it method")
+
+pObj=parentClass()
+cObj=childClass()
+pObj.checkit()
+cObj.checkit()
+
+#method overloading is not applicable in python
+#there are different ways to implement it.
+def add(instanceOf,*args):
+    if(instanceOf=='int'):
+        result=0
+    if(instanceOf=='str'):
+        result=''
+    if(instanceOf=='float'):
+        result=0.0
+    for i in args:
+        result+=i
+    return result
+
+print(add('int',1,2,3,4,5))
+print(add('float',1.0,5.6,7.9))
+print(add('str',"Python","_Tutorial"))
+
+
+#Encapsulation - abstraction and data hiding
+#use __ to declare private variable.
+class Encap:
+    def __init__(self):
+        self.a=20
+        self._b=30
+        self.__c=50
+    def printPrivate(self):
+        print(self.__c)
+    def setPrivate(self,maxC):
+        self.__c=maxC
+        print(self.__c)
+obj1=Encap()
+#to use private variable, use objName._classnamePrivatevariableorMethodName
+print(obj1.a,obj1._b,obj1._Encap__c)
+#call other public method to use private variable
+obj1.printPrivate()
+obj1.setPrivate(80)
