@@ -1,0 +1,35 @@
+import csv
+import re
+import PyPDF2
+import textract
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+
+#pdf file which you want to read
+filename ='roleGroupUsers (5).pdf'
+pdfFileObj = open(filename,'rb')
+#The pdfReader variable is a readable object that will be parsed.
+pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+#the number of pages will allow us to parse through all the pages.
+num_pages = pdfReader.numPages
+count = 0
+text = ""
+#The while loop will read each page.
+while count < num_pages:
+    pageObj = pdfReader.getPage(count)
+    count +=1
+    text += pageObj.extractText()
+if text != "":
+  text = text
+# If the above returns as False, we run the OCR library textract to #convert scanned/image based PDF files into text.
+else:
+  text = textract.process(fileurl, method='tesseract', language='eng')
+#print(text)
+comitid=re.findall("X[A-Z0-9]{6}|A[A-Z0-9]{6}",text)
+#print(comitid)
+#print(len(comitid))
+
+writefile=open("H:\\python\\tmvusers3.txt","w",encoding="UTF-8")
+for i in range(len(comitid)):
+    writefile=open("H:\\python\\tmvusers3.txt","a",encoding="UTF-8")
+    writefile.write("\"ENTITLEMENT\",\"PERSON\",\""+comitid[i]+"\",\""+comitid[i]+"\",,,\"TMV_TESTERS\",\"TMV_TESTERS\""+"\n")
